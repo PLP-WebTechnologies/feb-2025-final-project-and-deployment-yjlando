@@ -1,0 +1,259 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background-color: #6a4c9c;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 100px;
+    height: auto;
+    /* Ensure the logo stays at the left */
+    margin-left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #6a4c9c;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Home Page */
+.hero {
+    position: relative;
+    background-image: url('images/Home\ page\ background\ image.webp'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background-color: rgba(255, 255, 255, 0.75); /* Translucent white overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+    color: #040306;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #100b14;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* About Page */
+.about {
+    padding: 50px;
+    background-color: #f7f7f7;
+    text-align: justify
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Products Page */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.product {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 100%;
+    }
+}
+
+
+.product h2 {
+    color: #6a4c9c;
+}
+
+.product p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.products-intro {
+    padding: 40px 50px 0;
+    text-align: justify;
+}
+.products-intro h1 {
+    color: #6a4c9c;
+}
+
+    
+    /* Blog Page */
+.blog-header {
+    background-color: #6a4c9c;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.blog-header h1 {
+    font-size: 3em;
+}
+
+.blog-posts .post {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-posts .post h2 {
+    font-size: 2em;
+    color: #6a4c9c;
+}
+
+.blog-posts .post p {
+    margin-top: 10px;
+}
+
+.blog-posts .post a {
+    display: block;
+    margin-top: 20px;
+    color: #6a4c9c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact button {
+    padding: 10px;
+    background-color: #6a4c9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .about p {
+        font-size: 1em;
+    }
+
+    .blog-header h1 {
+        font-size: 2.5em;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
