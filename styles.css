@@ -5,6 +5,16 @@
   box-sizing: border-box;
 }
 
+/* VARIABLES */
+:root {
+  --primary: #5A3E85;
+  --secondary: #EFEAF6;
+  --accent: #B9A7D6;
+  --text-main: #1F1F1F;
+  --text-muted: #6E6E6E;
+  --white: #FFFFFF;
+}
+
 /* GLOBAL */
 html {
   scroll-behavior: smooth;
@@ -12,8 +22,9 @@ html {
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  color: #2B2B2B;
-  background-color: #F4F1FA;
+  background-color: var(--secondary);
+  color: var(--text-main);
+  line-height: 1.7;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -25,44 +36,46 @@ main {
 
 /* HEADER */
 header {
-  background-color: #6A4C9C;
-  padding: 20px 40px;
+  background-color: var(--white);
+  padding: 22px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .logo img {
-  height: 60px;
+  height: 55px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 28px;
 }
 
 nav a {
-  color: #fff;
+  color: var(--text-main);
   text-decoration: none;
   font-weight: 500;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: var(--primary);
 }
 
 /* FOOTER */
 footer {
-  background-color: #6A4C9C;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--white);
   text-align: center;
-  padding: 20px;
+  padding: 22px;
+  font-size: 0.95rem;
 }
 
 /* HERO */
 .hero {
-  background-image: url("images/hero-bg.jpg"); /* replace with your chosen image */
+  background-image: url("images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   min-height: 90vh;
@@ -72,50 +85,56 @@ footer {
 }
 
 .hero-overlay {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 60px;
-  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 70px;
+  max-width: 880px;
+  border-radius: 14px;
   text-align: center;
-  border-radius: 12px;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 15px;
-  color: #6A4C9C;
+  color: var(--primary);
+  margin-bottom: 14px;
 }
 
 .hero .subtitle {
   font-style: italic;
-  margin-bottom: 25px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
 }
 
 .hero p {
-  line-height: 1.7;
+  color: var(--text-main);
 }
 
-/* SECTION WRAPPER */
+/* SECTIONS */
 .section {
-  padding: 70px 40px;
+  padding: 80px 50px;
   max-width: 1100px;
   margin: auto;
+}
+
+.section h1 {
+  color: var(--primary);
+  margin-bottom: 25px;
 }
 
 /* PRODUCTS */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 35px;
 }
 
 .product-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
+  background-color: var(--white);
+  padding: 35px;
+  border-radius: 14px;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
 }
 
 .product-card:hover {
@@ -123,49 +142,64 @@ footer {
 }
 
 .product-card h2 {
-  color: #6A4C9C;
-  margin-bottom: 10px;
+  color: var(--primary);
+  margin-bottom: 12px;
 }
 
 /* BLOG */
 .blog-header {
-  background-color: #6A4C9C;
-  color: #fff;
-  padding: 70px 40px;
+  background-color: var(--secondary);
+  padding: 90px 40px 50px;
   text-align: center;
 }
 
+.blog-header h1 {
+  color: var(--primary);
+  font-size: 2.8rem;
+}
+
+.blog-header p {
+  color: var(--text-muted);
+}
+
 .blog-post {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 14px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.07);
 }
 
 .blog-post h2 {
-  color: #6A4C9C;
+  color: var(--primary);
+  margin-bottom: 12px;
 }
 
 /* CONTACT */
 .contact {
   text-align: center;
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
 }
 
 .contact p {
-  margin-top: 15px;
-  font-size: 1.1em;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 16px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .hero h1 {
     font-size: 2.2rem;
   }
 
-  header {
-    flex-direction: column;
-    gap: 15px;
+  .hero-overlay {
+    padding: 45px;
   }
 }
