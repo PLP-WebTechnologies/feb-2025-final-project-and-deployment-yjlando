@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Inspired Play | Divine Diversions</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Inspired Play</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <a href="index.html"><img src="images/DD Logo.png"></a>
-  </div>
   <nav>
-    <ul>
-      <li><a href="products.html">Our Products</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="products.html">Products</a>
+    <a href="inspired-play.html">Inspired play</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<section class="blog-header">
-  <h1>Inspired Play</h1>
-  <p>Reflections on faith, culture, creativity, and play</p>
-</section>
+<div class="container">
+  <h1>Inspired play</h1>
 
-<main class="section">
-  <div class="blog-post">
-    <h2>Why Faith-Centered Games Matter Today</h2>
-    <p>
-      In a culture shaped by screens and speed, intentional play creates space
-      for presence, reflection, and meaningful connection.
-    </p>
+  <div class="grid">
+    <div class="card" onclick="location.href='blog-post.html?id=1'">
+      <img src="images/blog1.jpg">
+      <h3>Faith and Play in a Digital Age</h3>
+    </div>
+    <div class="card" onclick="location.href='blog-post.html?id=2'">
+      <img src="images/blog2.jpg">
+      <h3>Why Board Games Still Matter</h3>
+    </div>
+    <div class="card" onclick="location.href='blog-post.html?id=3'">
+      <img src="images/blog3.jpg">
+      <h3>Christian Games Around the World</h3>
+    </div>
+    <div class="card" onclick="location.href='blog-post.html?id=4'">
+      <img src="images/blog4.jpg">
+      <h3>Play as Fellowship</h3>
+    </div>
+    <div class="card" onclick="location.href='blog-post.html?id=5'">
+      <img src="images/blog5.jpg">
+      <h3>Trends in Faith-Based Gaming</h3>
+    </div>
   </div>
-</main>
+</div>
 
-<footer>© 2025 Divine Diversions</footer>
+<footer>
+  Divine Diversions
+</footer>
+
 </body>
 </html>
