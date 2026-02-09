@@ -1,46 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Our Products | Divine Diversions</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Products</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/slider.js" defer></script>
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <a href="index.html"><img src="images/DD Logo.png"></a>
-  </div>
   <nav>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="blog.html">Inspired Play</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="products.html">Products</a>
+    <a href="inspired-play.html">Inspired play</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<main class="section">
-  <h1>Our Offerings</h1>
+<div class="container">
+  <h1>Our products</h1>
 
-  <div class="products-grid">
-    <a href="board-games.html" class="product-card">
-      <h2>Christian Board Games</h2>
-      <p>Games designed to spark faith-filled conversation and connection.</p>
-    </a>
-
-    <a href="card-games.html" class="product-card">
-      <h2>Faith & Trivia Card Games</h2>
-      <p>Interactive card decks that encourage reflection and joy.</p>
-    </a>
-
-    <a href="merch.html" class="product-card">
-      <h2>Brand Merchandise</h2>
-      <p>Intentional lifestyle products inspired by faith and creativity.</p>
-    </a>
+  <div class="slider">
+    <div class="slider-track">
+      <div class="slide" onclick="location.href='product-category.html?cat=board-games'">
+        <img src="images/product-board-games.jpg">
+      </div>
+      <div class="slide" onclick="location.href='product-category.html?cat=trivia'">
+        <img src="images/product-trivia.jpg">
+      </div>
+      <div class="slide" onclick="location.href='product-category.html?cat=candles'">
+        <img src="images/product-candles.jpg">
+      </div>
+      <div class="slide" onclick="location.href='product-category.html?cat=merch'">
+        <img src="images/product-merch.jpg">
+      </div>
+    </div>
   </div>
-</main>
 
-<footer>© 2025 Divine Diversions</footer>
+  <div class="slider-buttons">
+    <button onclick="moveSlide(-1)">Prev</button>
+    <button onclick="moveSlide(1)">Next</button>
+  </div>
+</div>
+
+<footer>
+  Divine Diversions
+</footer>
+
 </body>
 </html>
